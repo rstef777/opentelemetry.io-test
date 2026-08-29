@@ -33,7 +33,7 @@ You can use both solutions simultaneously.
 OpenTelemetry provides more than just zero-code and code-based telemetry
 solutions. The following things are also a part of OpenTelemetry:
 
-- Libraries can leverage the OpenTelemetry API as a dependency, which will have
+- [Libraries](../instrumenting-library) can leverage the OpenTelemetry API as a dependency, which will have
   no impact on applications using that library, unless the OpenTelemetry SDK is
   imported.
 - For each of the [signals][] you have several methods at your disposal to
