@@ -7,7 +7,7 @@ weight: 15
 
 For a system to be [observable][], it must be **instrumented**: that is, code
 from the system's components must emit [signals][], such as [traces][],
-[metrics][], and [logs][].
+[metrics][], [logs][], [baggage](../signals/baggage/), and [profiles](../signals/profiles/).
 
 Using OpenTelemetry, you can instrument your code in two primary ways:
 
@@ -28,12 +28,12 @@ the edges_ of your application.
 
 You can use both solutions simultaneously.
 
-## Additional OpenTelemetry Benefits
+## Additional OpenTelemetry Functionality
 
 OpenTelemetry provides more than just zero-code and code-based telemetry
-solutions. The following things are also a part of OpenTelemetry:
+solutions. The following functionality also a part of OpenTelemetry:
 
-- [Libraries](../instrumenting-library) can leverage the OpenTelemetry API as a dependency, which will have
+- [Libraries](../instrumentation/libraries/) can leverage the OpenTelemetry API as a dependency, which will have
   no impact on applications using that library, unless the OpenTelemetry SDK is
   imported.
 - For each of the [signals][] you have several methods at your disposal to

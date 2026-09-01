@@ -15,25 +15,20 @@ To ask those questions about your system, your application must be properly
 instrumented. That is, the application code must emit
 [signals](/docs/concepts/signals/) such as
 [traces](/docs/concepts/signals/traces/),
-[metrics](/docs/concepts/signals/metrics/), and
-[logs](/docs/concepts/signals/logs/). An application is properly instrumented
+[metrics](/docs/concepts/signals/metrics/),
+[logs](/docs/concepts/signals/logs/), [baggage](/docs/concepts/signals/baggage/), and [profiles](/docs/concepts/signals/profiles/). An application is properly instrumented
 when developers don't need to add more instrumentation to troubleshoot an issue,
 because they have all of the information they need.
 
 [OpenTelemetry](/docs/what-is-opentelemetry/) is the mechanism by which
 application code is instrumented to help make a system observable.
 
-## Reliability and metrics
+## Telemetry and metrics
 
 **Telemetry** refers to data emitted from a system and its behavior. The data
 can come in the form of [traces](/docs/concepts/signals/traces/),
-[metrics](/docs/concepts/signals/metrics/), and
-[logs](/docs/concepts/signals/logs/).
-
-**Reliability** answers the question: "Is the service doing what users expect it
-to be doing?" A system could be up 100% of the time, but if, when a user clicks
-"Add to Cart" to add a black pair of shoes to their shopping cart, the system
-doesn't always add black shoes, then the system could be **un**reliable.
+[metrics](/docs/concepts/signals/metrics/),
+[logs](/docs/concepts/signals/logs/), [baggage](/docs/concepts/signals/baggage/), and [profiles](/docs/concepts/signals/profiles/).
 
 **Metrics** are aggregations over a period of time of numeric data about your
 infrastructure or application. Examples include: system error rate, CPU
@@ -63,9 +58,7 @@ its components: logs, spans, and traces.
 
 A **log** is a timestamped message emitted by services or other components.
 Unlike [traces](#distributed-traces), they aren't necessarily associated with
-any particular user request or transaction. You can find logs almost everywhere
-in software. Logs have been heavily relied on in the past by both developers and
-operators to help them understand system behavior.
+any particular user request or transaction. You can use logs to understand system behavior.
 
 Sample log:
 
