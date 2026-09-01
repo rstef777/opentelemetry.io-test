@@ -5,7 +5,7 @@ description: Learn about the concept that enables Distributed Tracing.
 ---
 
 With context propagation, [signals](../signals/) ([traces](../signals/traces/),
-[metrics](../signals/metrics/), and [logs](../signals/logs/)) can be correlated
+[metrics](../signals/metrics/), [logs](../signals/logs/), [baggage](../signals/baggage/), and [profiles](../signals/profiles/)) can be correlated
 with each other, regardless of where they are generated. Although not limited to
 tracing, context propagation allows [traces](../signals/traces/) to build causal
 information about a system across services that are arbitrarily distributed
@@ -113,7 +113,7 @@ leverage the previously mentioned Propagators API:
   other cases, you pick the place you chose on the sending side to store the
   context.
 
-Note that it is possible to propagate context in protocols that do not have a
+> **_NOTE:_** It is possible to propagate context in protocols that do not have a
 dedicated field for metadata, but you have to make sure that on the receiving
 side they are extracted and removed before the data is processed, otherwise you
 may create undefined behavior.
@@ -160,7 +160,6 @@ SDK, you will find details on the support of context propagation in the
 respective documentation pages:
 
 - [C++](/docs/languages/cpp/instrumentation/#context-propagation)
-- .NET
 - [Erlang](/docs/languages/erlang/propagation/)
 - [Go](/docs/languages/go/instrumentation/#propagators-and-context)
 - [Java](/docs/languages/java/api/#context-api)
@@ -168,8 +167,6 @@ respective documentation pages:
 - [PHP](/docs/languages/php/propagation/)
 - [Python](/docs/languages/python/propagation/)
 - [Ruby](/docs/languages/ruby/instrumentation/#context-propagation)
-- Rust
-- Swift
 
 > [!IMPORTANT] Help wanted
 >
